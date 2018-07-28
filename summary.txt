@@ -1,0 +1,32 @@
+Project: Tweet Translator
+Contributors: Conner Evans and Connor Fairman
+Link to Github: https://github.com/cit-upenn/cit-591-fall-2017-project-twitter
+
+This project, as indicated by its name, translates a given Tweet in 
+English to a specified language. We utilize both the Twitter and Google 
+Translate APIs and chose to code in Python as it is more conducive to 
+working with these APIs. We use the Python wrapper Tweepy to implement 
+the Twitter API and the Python wrapper googletrans to implement the 
+Google Translate API. 
+
+Our program asks a user for a Twitter username (also known as a handle),
+the number of Tweets he/she wants to translate, and whether or not they
+want to include Retweets by that user. The program then passes these 
+as arguments to the getTweets() function, uses Tweepy’s .user_timeline() 
+function and writes the resulting Tweet(s) to a file, encodes the file
+in UTF-8 to handle special characters, and then passes that file to 
+the translateTextFile() function, which creates a file with the 
+translated Tweet using googletrans’ .translate() function. Lastly, we 
+use Tweepy’s .update_status() function to Tweet out the translated 
+file to the authenticated user’s (the account that provides the API keys
+and tokens) account. 
+
+We spilt this project between the two APIs. Conner wrote the code and 
+implemented the Twitter API and Connor did the same for the Google 
+Translate API. Additionally, we split testing between the two APIs. 
+
+If we had more time, we would fully implement a listener that waited for
+a specified user to Tweet and would then translate that Tweet right as 
+it was published. Further, we would add a gui to make the UX more user 
+friendly and interactive. As Python is more compatible with websites, 
+we would also like to host our program on a webpage. 
