@@ -1,7 +1,6 @@
 '''
 Created on Dec 17, 2017
 
-@author: connorfairman
 '''
 import unittest
 from secret import consumer_key, access_token, consumer_secret,\
